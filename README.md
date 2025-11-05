@@ -13,7 +13,7 @@ Extension untuk Cursor/VS Code yang memudahkan pembuatan module Odoo baru melalu
 
 ### Install dari GitHub Release (Paling Mudah) ⭐
 
-1. Buka halaman [Releases](https://github.com/YOUR_USERNAME/odoo-scaffold-extension/releases) di GitHub
+1. Buka halaman [Releases](https://github.com/Aghyksa/odoo-scaffold-extension/releases) di GitHub
 2. Download file `.vsix` dari release terbaru
 3. Buka Cursor/VS Code
 4. Buka Extensions (Cmd+Shift+X / Ctrl+Shift+X)
