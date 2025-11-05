@@ -1,0 +1,74 @@
+{
+  "name": "odoo-scaffold",
+  "displayName": "Odoo Scaffold",
+  "description": "Scaffold Odoo modules dengan mudah melalui context menu",
+  "version": "1.0.0",
+  "publisher": "aghyksa",
+  "author": {
+    "name": "Aghyksa",
+    "url": "https://www.linkedin.com/in/lion-younes"
+  },
+  "homepage": "https://www.linkedin.com/in/lion-younes",
+  "repository": {
+    "type": "git",
+    "url": "https://www.linkedin.com/in/lion-younes"
+  },
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:odoo-scaffold.scaffoldModule"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "odoo-scaffold.scaffoldModule",
+        "title": "Scaffold Odoo Module"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "odoo-scaffold.scaffoldModule",
+          "when": "explorerResourceIsFolder",
+          "group": "navigation@10"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Odoo Scaffold",
+      "properties": {
+        "odooScaffold.odooBinPath": {
+          "type": "string",
+          "default": "/usr/bin/odoo",
+          "description": "Path lengkap ke odoo-bin executable (contoh: /path/to/odoo/odoo-bin)"
+        },
+        "odooScaffold.pythonPath": {
+          "type": "string",
+          "default": "python3",
+          "description": "Path ke Python interpreter (default: python3)"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/vscode": "^1.80.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^8.0.0",
+    "typescript": "^5.0.0"
+  }
+}
+
