@@ -11,6 +11,16 @@ Extension untuk Cursor/VS Code yang memudahkan pembuatan module Odoo baru melalu
 
 ## Cara Install
 
+### Install dari GitHub Release (Paling Mudah) ⭐
+
+1. Buka halaman [Releases](https://github.com/YOUR_USERNAME/odoo-scaffold-extension/releases) di GitHub
+2. Download file `.vsix` dari release terbaru
+3. Buka Cursor/VS Code
+4. Buka Extensions (Cmd+Shift+X / Ctrl+Shift+X)
+5. Klik ... (More Actions) > **Install from VSIX**
+6. Pilih file `.vsix` yang sudah didownload
+7. Extension akan terinstall dan siap digunakan!
+
 ### Install dari Source
 
 1. Clone atau copy folder extension ini
@@ -26,7 +36,7 @@ Extension untuk Cursor/VS Code yang memudahkan pembuatan module Odoo baru melalu
 5. Tekan `F5` untuk menjalankan extension di Development Mode, atau:
 6. Package extension:
    ```bash
-   npx vsce package
+   npm run package
    ```
 7. Install file `.vsix` yang dihasilkan:
    - Buka Cursor/VS Code
@@ -103,9 +113,43 @@ npm run compile
 # Watch mode (auto compile on save)
 npm run watch
 
+# Package extension
+npm run package
+
 # Run extension in development
 # Tekan F5 di VS Code
 ```
+
+## Release & Build Otomatis
+
+Proyek ini menggunakan GitHub Actions untuk build dan release otomatis:
+
+### Build Otomatis
+- Setiap push ke branch `main` atau `master` akan trigger build otomatis
+- File `.vsix` akan tersedia sebagai artifact di GitHub Actions
+- Build juga akan run saat ada Pull Request
+
+### Membuat Release
+Untuk membuat release baru dan upload file `.vsix` ke GitHub:
+
+1. **Melalui GitHub UI (Recommended):**
+   - Buka halaman Releases di GitHub
+   - Klik "Draft a new release"
+   - Buat tag baru (contoh: `v1.0.0`)
+   - Tulis release notes
+   - Klik "Publish release"
+   - GitHub Actions akan otomatis build dan upload file `.vsix` ke release
+
+2. **Melalui Manual Workflow:**
+   - Buka tab Actions di GitHub
+   - Pilih workflow "Release Extension"
+   - Klik "Run workflow"
+   - Masukkan version tag (contoh: `v1.0.0`)
+   - File `.vsix` akan tersedia sebagai artifact
+
+### Struktur Workflow
+- **`.github/workflows/build.yml`**: Build otomatis saat push/PR
+- **`.github/workflows/release.yml`**: Build dan upload ke release saat publish release
 
 ## Requirements
 
