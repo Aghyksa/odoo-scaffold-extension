@@ -46,8 +46,6 @@ jobs:
       
     - name: Package extension
       run: npm run package
-      env:
-        VSCE_PAT: ${{ secrets.VSCE_PAT }}
       
     - name: Get VSIX filename
       id: vsix_filename
