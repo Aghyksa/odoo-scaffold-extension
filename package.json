@@ -8,11 +8,21 @@
     "name": "Aghyksa",
     "url": "https://www.linkedin.com/in/lion-younes"
   },
-  "homepage": "https://www.linkedin.com/in/lion-younes",
+  "homepage": "https://github.com/Aghyksa/odoo-scaffold-extension#readme",
+  "bugs": {
+    "url": "https://github.com/Aghyksa/odoo-scaffold-extension/issues"
+  },
   "repository": {
     "type": "git",
-    "url": "https://www.linkedin.com/in/lion-younes"
+    "url": "https://github.com/Aghyksa/odoo-scaffold-extension.git"
   },
+  "license": "MIT",
+  "keywords": [
+    "odoo",
+    "scaffold",
+    "python",
+    "module"
+  ],
   "engines": {
     "vscode": "^1.80.0"
   },
